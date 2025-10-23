@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #020114;
+    color: white;
+}
+
+/* ------------------- header ------------------ */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(6, 0, 122, 0.235);
+    padding: 12px 20px;
+}
+
+nav i{
+    font-size: 30px;
+    color: #B1FF00;
+}
+
+.logo{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.logo::first-letter , .hero h1::first-letter , h2::first-letter{
+    color: #B1FF00;
+}
+
+.logo span{
+    margin-left:30px ;
+}
+
+.list-header{
+    display: none;
+}
+
+/* ----------------------- hero --------------------- */
+
+.hero{
+    background-image: url(/assetes/images/cover_2.jpg);
+    background-size: cover;
+    background-position: 40rem;
+}
+
+.content{
+    display: inline-block;
+    margin: 3rem 30px;
+
+}
+
+.hero h1{
+    font-size: 40px;
+    
+}
+
+button{
+    padding: 15px 3rem;
+    background-color: #B1FF00;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+
+.hero div {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero small{
+    font-size: 13px;
+    color: rgb(167, 162, 162);
+}
+
+.line{
+    position: absolute;
+    left: 10px;
+    bottom: 10rem;
+    width: 1px;
+    height: 180px;
+    background-color: rgb(227, 223, 223);
+}
+
+.fa-solid{
+    margin-left: 15px;
+}
+
+/* ----------------- Login --------------------- */
+.login-page , .signUp-page{
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    width: 85%;
+    color: #f6f6f8;
+    margin: 20px auto;
+    padding: 20px 0;
+    border: 2px solid black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 17px;
+}
+
+.login-page form , .signUp-page form{
+    width: 80%;
+    text-align: start;
+    color: white;
+    display: grid;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.login-page form input{
+    padding: 17px 8px;
+    border: none;
+    border-radius: 8px;
+
+}
+
+.login-page h2 , .signUp-page h2{
+   font-size: 40px;
+   margin-top: 20px;
+}
+
+.login-page button , .signUp-page button{
+    width: 80%;
+    margin: 0;
+}
+
+.login-page a , .signUp-page a{
+    color: #2756e3;
+    text-decoration: none;
+}
+
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.line-or{
+    width: 160px;
+    height: 1px;
+    background-color: white;
+}
+.btn-creat{
+   margin-bottom: 20px;
+   background: none;
+   border: 1px solid #B1FF00;
+}
+
+.btn-creat a{
+    color: #B1FF00;
+}
+
+/* --------------- sing up ------------------ */
+.signUp-page form input {
+    padding: 12px 8px;
+    border: none;
+    border-radius: 8px;
+}
+
+.title-desktop{
+    display: none;
+}
+/* ----------------- responsive -------------- */
+@media (min-width : 720px  ) {
+
+    .title-desktop{
+    display: block;
+}
+
+    nav i{
+    display: none;
+}
+
+/* ------------ login ---------- */
+.login-page , .signUp-page{
+    width: 40%;
+}
+.login-page h2,.signUp-page h2{
+    display: none;
+}
+
+.responsive-desktop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title-desktop{
+    font-size: 25px;
+    max-width: 30rem;
+}
+
+.title-desktop h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.login-page , .signUp-page{
+       margin: 30px 0;
+}
+
+/* ----------- hero ----------- */
+.hero{
+    display: flex;
+    align-items: center;
+    background-position: -152px;
+    height: 89vh;
+    align-content: end;
+}
+
+.content{
+    display: inline-block;
+    margin-left: 10rem;
+    
+
+}
+
+.line{
+    left: 9rem;
+    bottom: 5rem;
+}
+.hero h1{
+    font-size: 60px;
+}
+/* -------------------- header ------------- */
+
+i{
+    display: none !important;
+}
+.list-header{
+    width: 40%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     list-style: none;
+}
+
+.list-header button{
+    padding: 8px 12px;
+    margin: 0;;
+}
+
+}
