@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 48px;
+}
+
+body{
+    background: #050319;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.main{
+    display: grid;
+    grid-row: auto;
+}
+
+
+.hero{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    background: url(/assets/images/resident_evil_6_desktop.jpg);
+    align-content: center;
+}
+
+.hero h1{
+    color: aliceblue;
+    padding: 2rem;
+    width: 60vw;
+}
+
+.section__title{
+    position: relative;
+    margin-left: .5rem;
+}
+
+.section__title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    top: 20%;
+    margin-left: -8px;
+    width: 4px;
+    background: green;
+}
+
+.horizontal-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+
+.horizontal-list-item{
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: .75rem;
+}
+
+.horizontal-list img{
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to bottom,white,black); */
+    border-radius: .75rem;
+    object-fit: cover;
+}
+
+
+/* latest news */
+
+.latest-news{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.news-list{
+    flex: 1 1 auto;
+    width: 490px;
+    /* min-width: 300px; */
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    gap: 1rem;
+}
+
+.latest-news h2:first-child{
+    flex: 1 1 100%;
+}
+.latest-news-item{
+    grid-area: auto / 1 / span 1 / span 12;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.item__image{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.item__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.item__info{
+    width: 100%;
+    padding: .5rem 1rem .5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info__title{
+    font-size: large;
+}
+.info__description{
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(255,255,255, 0.7);
+}
+
+.info__bottom{
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info__bottom div:first-child{
+    margin-right: auto;
+}
+.info__interaction{
+    color: white;
+    display: flex;
+    font-size: small;
+}
+
+.trending{
+    flex: 1 1 auto;
+    /* grid-area: 5 / 1 / auto / span 12; */
+    background: #1f1a27;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.trending-item{
+    display: flex;
+    gap: 1rem;
+}
+
+.trending .rank{
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.75);
+}
+.trending .item-meta{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.meta__second-info{
+    font-size: .75rem;
+    color: rgba(240, 248, 255, 0.591);
+}
+
+
+
+
+
+/* article details styles  */
+.details-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.details-description{
+    font-weight: normal;
+    font-size: 1rem;
+    color: rgba(240, 255, 255, 0.75);
+}
+
+ /* comments grid  */
+ .comment__grid{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+ }
+ .comment__profile{
+    grid-area: 1 / 1 / span 2 / 2;
+ }
+
+ .comment__img{
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+ .interactions{
+    
+ }
+ .comment__meta{
+    grid-area: 1 / 2 / span 1 / 10;
+ }
+ .comment__more{
+    grid-area: 1 / 11 / span 1 /  12;
+ }
+
+ .comment__interactions{
+    display: flex;
+    gap: 1rem;
+    grid-area: 2 / 2 /auto / span 11;
+ }
+
+/* conponents */
+
+.badge{
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-size: .5rem;
+    font-weight: bold;
+}
+.badge-red{
+    color: rgb(218, 15, 15);
+    background: rgba(198, 12, 12, 0.4);
+    border: 1px solid rgb(232, 8, 8);
+}
+
+
+ /* utilities */
+.mx-sm{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mt-m{
+    margin-top: 2rem;
+}
+
+.mt-sm{
+    margin-top: .5rem;
+}
+
+
+
+@media  (min-width : 1024px) {
+
+
+    body{
+        /* max-width: 1200px; */
+        margin-left: 15% ;
+        margin-right: 15% ;
+    }
+    /* .latest-news-item{
+        grid-area: auto / 1 /  auto / span 8;
+    }
+    .trending{
+        grid-area: 2 / 9 / auto / span 12;
+    } */
+
+    .details-img{
+        border-radius: .5rem;
+    }
+}
