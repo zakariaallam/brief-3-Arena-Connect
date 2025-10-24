@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="/css/articles.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Arina <br> <span>Connect</span></div>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <!-- hero section  -->
+        <section class="hero">
+            <h1>New relase of biohazard 6</h1>
+        </section>
+
+        <!-- featured news -->
+        <section class="mx-sm mt-m">
+            <h2 class="section__title">Featured stories</h2>
+            <div class="horizontal-list mt-sm">
+                <div class="horizontal-list-item">
+                    <img class="img" src="/assets/images/articles_img1.jpg" alt="article image">
+                </div>
+                <div class="horizontal-list-item">
+                    <img class="img" src="/assets/images/articles_img2.jpg" alt="article image">
+                </div>
+                <div class="horizontal-list-item">
+                    <img class="img" src="/assets/images/articles_img3.jpg" alt="article image">
+                </div>
+                <div class="horizontal-list-item">
+                    <img class="img" src="/assets/images/articles_img1.jpg" alt="article image">
+                </div>
+            </div>
+        </section>
+
+        <!-- latest news  -->
+        <section id="latest-news" class="latest-news mt-m mx-sm">
+            <h2 class="section__title">Latest News</h2>
+            <div class="news-list">
+                <article class="latest-news-item">
+                    <div class="item__image">
+                        <img src="/assets/images/articles_img3.jpg" alt="article image">
+                    </div>
+                    <div class="item__info">
+                        <h4 class="info__title">Article Title 1</h4>
+                        <p class="info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dolor erat. Nulla consectetur aliquam augue, sed pellentesque purus iaculis non. Nunc gravida, mi dapibus sagittis interdum, orci lacus feugiat est, eget sollicitudin diam nulla et sem</p>
+                        <div class="info__bottom">
+                            <div class="badge badge-red">Adventure hacks</div>
+                            <div class="info__interaction"><i class="fa-regular fa-comment"></i>11</div>
+                            <div class="info__interaction"><i class="fa-regular fa-heart"></i>20</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="latest-news-item">
+                    <div class="item__image">
+                        <img src="/assets/images/articles_img2.jpg" alt="article image">
+                    </div>
+                    <div class="item__info">
+                        <h4>Article Title 1</h4>
+                        <p class="info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dolor erat. Nulla consectetur aliquam augue, sed pellentesque purus iaculis non. Nunc gravida, mi dapibus sagittis interdum, orci lacus feugiat est, eget sollicitudin diam nulla et sem</p>
+                        <div class="info__bottom">
+                            <div class="badge badge-red">Adventure hacks</div>
+                            <div class="info__interaction"><i class="fa-regular fa-comment"></i>11</div>
+                            <div class="info__interaction"><i class="fa-regular fa-heart"></i>20</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="latest-news-item">
+                    <div class="item__image">
+                        <img src="/assets/images/articles_img1.jpg" alt="article image">
+                    </div>
+                    <div class="item__info">
+                        <h4>Article Title 1</h4>
+                        <p class="info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dolor erat. Nulla consectetur aliquam augue, sed pellentesque purus iaculis non. Nunc gravida, mi dapibus sagittis interdum, orci lacus feugiat est, eget sollicitudin diam nulla et sem</p>
+                        <div class="info__bottom">
+                            <div class="badge badge-red">Adventure hacks</div>
+                            <div class="info__interaction"><i class="fa-regular fa-comment"></i>11</div>
+                            <div class="info__interaction"><i class="fa-regular fa-heart"></i>20</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- trending news  -->
+            <aside class="trending">
+                <h2>Trending</h2>
+                <div class="trending-item mt-sm">
+                    <div class="rank">#1</div>
+                    <div class="item-meta mt-sm">
+                        <h4>These things arent going to work</h4>
+                        <p class="meta__second-info">6 hours ago . 3 mins read</p>
+                    </div>
+                </div>
+
+                <div class="trending-item mt-sm">
+                    <div class="rank">#2</div>
+                    <div class="item-meta mt-sm">
+                        <h4>These things arent going to work</h4>
+                        <p class="meta__second-info">6 hours ago . 3 mins read</p>
+                    </div>
+                </div>
+
+                <div class="trending-item mt-sm">
+                    <div class="rank">#3</div>
+                    <div class="item-meta mt-sm">
+                        <h4>These things arent going to work</h4>
+                        <p class="meta__second-info">6 hours ago . 3 mins read</p>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function redirect(event){
+            if(event.target.classList.contains('latest-news-item')){
+                window.location.href = "details.html";}
+        }
+        const latestNews = document.getElementById("latest-news");
+
+        latestNews.addEventListener('click',redirect);
+    </script>
+</body>
+</html>
