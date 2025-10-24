@@ -58,9 +58,9 @@ footer{
     background-image: linear-gradient(to top,#030220d4,#020114);
 }
 .social_fot{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    gap: 30px;
+    margin-left: 4px;
 }
 
 .imformation_fot{
@@ -381,6 +381,68 @@ nav i{
 .list-header button{
     padding: 8px 12px;
     margin: 0;;
+}
+
+/* --------- footer -----------  */
+footer{
+    padding-top: 30px;
+    margin-top: 6rem;
+    background-image: linear-gradient(to top,#030220d4,#020114);
+}
+.social_fot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.imformation_fot{
+    width: 254px;
+}
+
+.imformation_fot ul{
+    list-style: none;
+}
+
+.imformation_fot li , .imformation_fot p{
+    color: #B0B0B0;
+    margin: 10px 0;
+}
+
+.social_media{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.social_media div{
+    width: 40px;
+    height: 40px;
+    background-color: #00ffff1a;
+    border: 1px solid #00ffff4e;
+    padding: 1px 1px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social_media div i{
+    font-size: 19px;
+    margin-top: 10px;
+    color: #B1FF00;
+}
+.addres_fot{
+    border-top: 1px solid #0095ff30;
+    height: 4rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.addres_fot p {
+    text-align: center;
+    margin-top: 20px;
+    color: #B0B0B0;
+}
+
+.arena-h3::first-letter{
+      color: #B1FF00;
 }
 
 }
