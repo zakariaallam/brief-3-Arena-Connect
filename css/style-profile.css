@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+body{
+    background: #050319;
+
+}
+/* Profile  */
+.pic-name-edit_btn{
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px 20px 20px;
+}
+.pic-name-edit_btn div{ 
+    margin-bottom: 10px;
+}
+
+/* .cover_profil{
+    width: 100%;
+    height: 221px;
+    background: rgba(96, 96, 96,0.38);
+    border-radius: 0 0 30px 30px;
+    border-bottom: 1px solid #B1FF00;
+    position: relative;
+}
+.back_cover{
+    background: #050319;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.add_cover i{
+    font-size: 30px;
+    color: #B1FF00;
+    background: none;
+} */
+.pic_profil img{
+    width: 128px;
+    border-radius: 50%;
+    border: solid 2px #B1FF00;
+    box-shadow: 0 0 10px #B1FF00;
+}
+.name{
+    font-weight: bold;
+    font-size: 24.2px;
+    color: white;
+}
+.edit_btn{
+    width: 267px;
+    height: 48px;
+    background: none;
+    border-radius: 12px;
+    border: 2px solid #B1FF00;
+    cursor: pointer;
+}
+.edit_btn:hover{
+    border:solid 2px #050319;
+    box-shadow: #B1FF00 0 0 8px;
+
+}
+.edit_btn i{
+    font-size: 20px;
+    color: #B1FF00;
+    background: none;
+}
+.edit_btn i :hover{
+    color: #050319;
+}
+.edit_btn label{
+    font-size: 19px;
+    font-weight: bold;
+    color: #B1FF00;
+    background: none;
+    text-align: center;
+    cursor: pointer;
+}
+.level{
+    font-weight: bold;
+    font-size: 19px;
+    color: #B1FF00;
+    padding-bottom: 5px;
+}
+.level-playing{
+    grid-column: 1;
+    grid-column-end: span 4;
+}
+.level-social_media{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    padding: 15px;
+}
+.playing{
+    font-size: 14.2px;
+    font-weight: bold;
+    color: white;
+}
+.social_media i{
+    font-size: 40px;
+    color: #B1FF00;
+}
+.social_media{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    grid-column: 6;
+    gap: 5px;
+}
+.name_game{
+    width: 182px;
+    height: 36px;
+    background: rgba(6, 0, 122, 0.25);
+    border-radius: 10px;
+    align-content: center;
+    font-weight: bold;
+    font-size: 14.2px;
+    color: white;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+.title_fav_game{
+    font-size: 14.2px;
+    font-weight: bold;
+    color: white; 
+    line-height: 32px;  
+    padding-left: 15px; 
+}
+.fav_games{
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 80px;
+    justify-self: center;
+}
+
+.fav_games  img{
+    width: 100px;
+    height: 125px;
+    border: solid 2px #B1FF00;
+    border-radius: 10px;
+}
+/* Edit profile */
+h1{
+    font-size: 32.2px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.edit_profile{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+.edit_name{
+    height: 100px;
+    background: rgba(6, 0, 122,0.31);
+    border-radius: 12px;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;
+}
+.edit_name > .user_name{
+    display: grid;
+    justify-content: center;
+}
+.edit_name div{
+    background: none;
+}
+.user_name{
+    font-size: 24.2px;
+    font-weight: bold;
+    color: white;
+}
+.head_div{
+    color: white  ;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px  0 0 8px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.head_div div:nth-child(2){
+    grid-column: 6;
+    text-align: end;
+    padding-right: 10px;
+
+}
+.head_div div:nth-child(1){
+    grid-column-end: span 2;
+}
+.edit_pic_profile{
+    background: rgba(6, 0, 122,0.31) ;
+    height: 165px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;
+}
+.edit_pic_profile img{
+    width: 120px;
+    border-radius: 60px;
+}
+.edit_pic_profile >.pic_profil_page_edit{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.edit_pic_profile div{
+    background: none;
+}
+.edit_cover_photo{
+    height:165px;
+    background: rgba(6, 0, 122,0.31) ;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;
+}
+.edit_cover_photo div{
+    background: none;
+}
+.edit_cover_photo > .icon_change_cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit_cover_photo i{
+    font-size: 30px;
+    background: none;
+    color: white;
+    padding-top: 50px;
+}
+/* Edit password */
+.section_edit_pswd{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head_edit_pswd{
+padding-bottom: 10px;
+}
+.my_name_in-edit_pswd{
+    color: white;
+    font-size: 15.2px;
+    font-weight: bold;
+    line-height: 32px;
+}
+h2{
+    color: white;
+    font-size: 24.2px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.about_pswd{
+    color: white;
+    font-size: 15.2px;
+    font-weight: 300;
+    line-height: 22px;
+    width: 381px;
+    
+}
+.inputs_passwords{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 17px;
+    justify-items: center;
+}
+.input_pswd{
+    width: 381px;
+    height: 68px;
+    background: rgba(6, 0, 122, 0.31);
+    border: solid 1.5px #B1FF00;
+    border-radius: 12px;
+    padding-left: 10px;
+    font-size: 15.2px;
+    color: white;
+    
+}
+.div_forget_pswd{
+    padding:10px 5px 5px 0;
+}
+.forget_pswd{
+    color: white;
+    text-decoration: none;
+    font-size: 15.2px;
+    font-weight: bold;
+}
+.btn_pswd{
+padding-top: 30px;
+}
+.btn_change_pswd{
+    width: 381px;
+    height: 58px;
+    border-radius: 32px;
+    background: #B1FF00;
+    border: solid 1.5px #B1FF00;
+    color: #050319;
+    font-size: 21.2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn_change_pswd:hover{
+    background: #050319;
+    color: #B1FF00;
+    border: solid 1.5px #B1FF00;
+}
+
+/* media query profile*/
+@media (min-width:660px){
+    .fav_games  img{
+        width:160px;
+        height: 230px;
+        border-radius: 20px;
+        row-gap: 80px;
+        column-gap: 60px;
+    }
+    .pic_profil img{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+@media (min-width:1025px ){
+    .fav_games  img{
+        width:284px;
+        height: 330px;
+        border-radius: 10px;
+        row-gap: 129px;
+        column-gap: 98px;
+        border: solid 3px #B1FF00;
+    }
+    .pic_profil img{
+        width: 180px;
+        height: 180px;
+        border: #B1FF00 solid 3px;
+    }
+}
