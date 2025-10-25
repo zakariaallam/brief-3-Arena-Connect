@@ -40,11 +40,13 @@
     display: flex;
     justify-content: end;
     border-radius: 100%;
+    border: 1px solid #cce816;
     /* border: 2px solid rgb(55, 255, 0); */
     background-image: url(../images/chat-images/chat-1.jfif);
     background-size: cover;
     background-position: center;
 }
+
 .chat-contents-info-photo-online2{
     background: rgb(255, 255, 255);
     border-radius: 100%;
@@ -57,12 +59,15 @@
     font-weight: 500;
 }
 .chat-info-status2{
+    width: 20px;
+    text-align: center;
     margin-left: 10px;
     opacity: 20%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
     font-size: 16px;
 }
+
 /* chat centent content*/
 
 .chat-contents-send2{
@@ -92,7 +97,8 @@
     /* border: 1px solid #807f7f; */
     display: flex;
     flex-direction: column;
-    gap:10px;
+    align-items: center;
+    gap: 20px;
 }
 .chat-contents-send-up-profile-photo2{
     width: 100px;

@@ -89,8 +89,9 @@
 .chat-contents-send-up-profile{
     /* border: 1px solid #807f7f; */
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap:10px;
+    gap:20px;
 }
 .chat-contents-send-up-profile-photo{
     width: 100px;
@@ -102,7 +103,6 @@
     background-position: center;
     display: flex;
     justify-content: end;
-    margin-left: 10px;
 }
 .chat-contents-send-up-profile-photo-online{
     width:15px;
@@ -117,8 +117,14 @@
 }
 .chat-contents-send-up-profile-follwer p{
     color: white;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
+    opacity: 50%;
+}
+#chat-info-status{
+    margin: 10px;
+    width: 300px;
+    text-align: center;    
 }
 .chat-contents-send-down{
     width: 100%;
@@ -224,6 +230,12 @@
     font-weight: 100;
     opacity: 80%;
 }
+.chat-accounts-info-section a{
+    text-decoration: none;
+    color: white;
+    opacity: 80%;
+}
+
 /* friends*/
 
 .chat-accounts-friends{
@@ -295,7 +307,7 @@
 }
 .chat-accounts-friends-section-info{
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
     margin-left: 10px;
 }
@@ -313,29 +325,45 @@
     font-size: 20px;
 }
 #max{
-    background-image: url(../images/chat-images/2.jfif);
+    background-image: url(../images/chat-images/1.jfif);
     background-size: cover;
 }
 #Yousssef{
-    background-image: url(../images/chat-images/3chat.jfif);
+    background-image: url(../images/chat-images/3.jfif);
     background-size: cover;
 }#ahmed{
-    background-image: url(../images/chat-images/4chat.jfif);
+    background-image: url(../images/chat-images/4.jfif);
     background-size: cover;
 }#adbrazak{
-    background-image: url(../images/chat-images//5chat.jfif);
+    background-image: url(../images/chat-images/5.jfif);
     background-size: cover;
 }#zakaria{
-    background-image: url(../images/chat-images/6chat.jfif);
+    background-image: url(../images/chat-images/10.jfif);
     background-size: cover;
 }#salah{
-    background-image: url(../images/chat-images/8chat.jfif);
+    background-image: url(../images/chat-images/8.jfif);
     background-size: cover;
 }#max{
+    background-image: url(../images/chat-images/9.jfif);
+    background-size: cover;
+}
+#Pixel{
     background-image: url(../images/chat-images/2.jfif);
     background-size: cover;
-    
 }
+#genv{
+    background-image: url(../images/chat-images/10.jfif);
+    background-size: cover;
+}
+#game-chenges{
+    background-image: url(../images/chat-images/12.jfif);
+    background-size: cover;
+}
+#up-legion{
+    background-image: url(../images/chat-images/11.jfif);
+    background-size: cover;
+}
+
 
 /*media*/
 
