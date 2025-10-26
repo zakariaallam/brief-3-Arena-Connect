@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/articles.css">
     <link rel="stylesheet" href="/css/all.min.css">
 </head>
@@ -11,12 +12,20 @@
 
     <header>
         <nav>
-            <div class="logo">Arina <br> <span>Connect</span></div>
-            <i class="fa-solid fa-bars"></i>
+            <img src="/assetes/logo.svg" alt="logo">
+            <i class="fa-solid fa-bars burger-menu"></i>
+            <ul class="list-header">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="edit-profile.html">Parametre</a></li>
+                <li><a href="articles.html">News</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="login.html" class="btn btn--primary">Connect</a></li>
+            </ul>
         </nav>
     </header>
     
-    <main class="main">
+    <main class="main mt-xxxl">
         <!-- hero section  -->
         <section class="hero">
             <h1>New relase of biohazard 6</h1>
@@ -25,18 +34,18 @@
         <!-- featured news -->
         <section class="mx-sm mt-m">
             <h2 class="section__title">Featured stories</h2>
-            <div class="horizontal-list mt-sm">
+            <div id="horizontal-list" class="horizontal-list mt-sm">
                 <div class="horizontal-list-item">
-                    <img class="img" src="/assets/images/articles_img1.jpg" alt="article image">
+                    <img class="img" src="/assetes/images/articles_img1.jpg" alt="article image">
                 </div>
                 <div class="horizontal-list-item">
-                    <img class="img" src="/assets/images/articles_img2.jpg" alt="article image">
+                    <img class="img" src="/assetes/images/articles_img2.jpg" alt="article image">
                 </div>
                 <div class="horizontal-list-item">
-                    <img class="img" src="/assets/images/articles_img3.jpg" alt="article image">
+                    <img class="img" src="/assetes/images/articles_img3.jpg" alt="article image">
                 </div>
                 <div class="horizontal-list-item">
-                    <img class="img" src="/assets/images/articles_img1.jpg" alt="article image">
+                    <img class="img" src="/assetes/images/articles_img1.jpg" alt="article image">
                 </div>
             </div>
         </section>
@@ -47,7 +56,7 @@
             <div class="news-list">
                 <article class="latest-news-item">
                     <div class="item__image">
-                        <img src="/assets/images/articles_img3.jpg" alt="article image">
+                        <img src="/assetes/images/articles_img3.jpg" alt="article image">
                     </div>
                     <div class="item__info">
                         <h4 class="info__title">Article Title 1</h4>
@@ -62,7 +71,7 @@
 
                 <article class="latest-news-item">
                     <div class="item__image">
-                        <img src="/assets/images/articles_img2.jpg" alt="article image">
+                        <img src="/assetes/images/articles_img2.jpg" alt="article image">
                     </div>
                     <div class="item__info">
                         <h4>Article Title 1</h4>
@@ -77,7 +86,7 @@
 
                 <article class="latest-news-item">
                     <div class="item__image">
-                        <img src="/assets/images/articles_img1.jpg" alt="article image">
+                        <img src="/assetes/images/articles_img1.jpg" alt="article image">
                     </div>
                     <div class="item__info">
                         <h4>Article Title 1</h4>
@@ -122,18 +131,63 @@
 
     </main>
 
-    <footer>
+    <footer class="mt-xxxl">
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h4>Arena-connect</h4>
+                <p class="text-body">Virtual destination of nowhere.</p>
+                <a href="#">terms of use & polycies</a>
+            </div>
 
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">Accueil</a>
+                <a href="#">News</a>
+                <a href="#">Profil</a>
+                <a href="#">Chat</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>About us</h4>
+                <a href="#">About Arena connect</a>
+                <a href="#">Contact us</a>
+                <a href="#">Contact us</a>
+                <a href="#">Buy us coffee</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Get in touch</h4>
+                <p class="text-body">Questions of feedback?\nwe'd love to hear from you.</p>
+                <div class="social-links">
+                    <a href="#https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#https://discord.com/"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="https://www.twitch.tv/"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-body mt-m">All rights reserver, designed by GenV/YAZS</p>
     </footer>
 
     <script>
         function redirect(event){
-            if(event.target.classList.contains('latest-news-item')){
-                window.location.href = "details.html";}
+            const item = event.target.closest('.latest-news-item');
+            if(!item)
+                return;
+            window.location.href = "details.html";
+            event.stopPropagation();
+        }
+        function redirect2(event){
+            const item = event.target.closest('.horizontal-list-item');
+            if(!item)
+                return;
+            window.location.href = "details.html";
+            event.stopPropagation();
         }
         const latestNews = document.getElementById("latest-news");
+        const horizList = document.getElementById("horizontal-list");
 
         latestNews.addEventListener('click',redirect);
+        horizList.addEventListener('click',redirect2);
     </script>
 </body>
 </html>
