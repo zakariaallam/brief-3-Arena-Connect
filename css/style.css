@@ -1023,7 +1023,7 @@ footer{
 }
 .edit_btn{
     width: 267px;
-    height: 48px;
+    height: 55px;
     background: none;
     border-radius: 12px;
     border: 2px solid #B1FF00;
@@ -1075,10 +1075,20 @@ footer{
 .social_media i{
     font-size: 40px;
     color: #B1FF00;
+    cursor: pointer;
+    
+}
+.social_media i:hover{
+    box-shadow: 0 0 10px 4px #B1FF00;
+    background: #B1FF00;
+    transition: 0.3s;
+    color: #020114;
+    border-radius: 5px;
 }
 .social_media{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: start;
     grid-column: 6;
     gap: 5px;
@@ -1094,6 +1104,12 @@ footer{
     color: white;
     margin-left: 5px;
     padding-left: 10px;
+    cursor: pointer;
+}
+.name_game:hover{
+    background: #B1FF00;
+    transition: 0.3s;
+    color: #050319;
 }
 .title_fav_game{
     font-size: 14.2px;
@@ -1101,15 +1117,17 @@ footer{
     color: white; 
     line-height: 32px;  
     padding-left: 15px; 
+    margin-bottom: 15px;
 }
 
 .fav_games{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 40px;
-    column-gap: 80px;
-    justify-self: center;
+    row-gap: 60px;
+    /* column-gap: 60px; */
+    place-items: center;
+    /* justify-self: center; */
 }
 
 .fav_games  img{
@@ -1117,6 +1135,12 @@ footer{
     height: 125px;
     border: solid 2px #B1FF00;
     border-radius: 10px;
+    box-shadow: 0 0 10px #B1FF00;
+    cursor: pointer;
+}
+.fav_games  img:hover{
+    border: solid 2px #050319;
+    box-shadow: 0 0 10px 4px #B1FF00;
 }
 /* Edit profile */
 h1{
@@ -1264,13 +1288,10 @@ h2{
     font-size: 15.2px;
     font-weight: bold;
 }
-.btn_pswd{
-padding-top: 30px;
-}
 .btn_change_pswd{
     width: 381px;
     height: 58px;
-    border-radius: 32px;
+    border-radius: 10px;
     background: #B1FF00;
     border: solid 1.5px #B1FF00;
     color: #050319;
@@ -1285,7 +1306,12 @@ padding-top: 30px;
 }
 
 /* media query profile*/
-@media (min-width:660px){
+@media(min-width:0) and (max-width:600px) {
+    #pencil{
+        display: none;
+    }
+}
+@media (min-width: 600px) and (max-width:1025px){
     .fav_games  img{
         width:160px;
         height: 230px;
@@ -1297,21 +1323,35 @@ padding-top: 30px;
         width: 150px;
         height: 150px;
     }
+    #pencil{
+        display: none;
+    }
 
 }
 @media (min-width:1025px ){
     .fav_games  img{
-        width:284px;
-        height: 330px;
+        width:200px;
+        height: 280px;
         border-radius: 10px;
         row-gap: 129px;
-        column-gap: 98px;
+        column-gap: 300px;
         border: solid 3px #B1FF00;
     }
     .pic_profil img{
         width: 180px;
         height: 180px;
         border: #B1FF00 solid 3px;
+    }
+    .pic-name-edit_btn{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #pencil{
+        color: #B1FF00;
+        cursor: pointer;
+    }
+    .div-edit_btn{
+        display: none;
     }
 }
 
