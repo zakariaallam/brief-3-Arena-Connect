@@ -35,7 +35,7 @@
         </nav>
     </header>
     
-    <main class="main">
+    <main class="main mt-xxxl">
         <!-- hero section  -->
         <section class="hero">
             <h1>New relase of biohazard 6</h1>
@@ -44,7 +44,7 @@
         <!-- featured news -->
         <section class="mx-sm mt-m">
             <h2 class="section__title">Featured stories</h2>
-            <div class="horizontal-list mt-sm">
+            <div id="horizontal-list" class="horizontal-list mt-sm">
                 <div class="horizontal-list-item">
                     <img class="img" src="assetes/images/articles_img1.jpg" alt="article image">
                 </div>
@@ -141,7 +141,7 @@
 
     </main>
 
-     <footer>
+    <footer>
             <div class="social_fot">
                 <div class="imformation_fot">
                      <h3 class="arena-h3">
@@ -213,12 +213,24 @@
 
     <script>
         function redirect(event){
-            if(event.target.classList.contains('latest-news-item')){
-                window.location.href = "details.html";}
+            const item = event.target.closest('.latest-news-item');
+            if(!item)
+                return;
+            window.location.href = "details.html";
+            event.stopPropagation();
+        }
+        function redirect2(event){
+            const item = event.target.closest('.horizontal-list-item');
+            if(!item)
+                return;
+            window.location.href = "details.html";
+            event.stopPropagation();
         }
         const latestNews = document.getElementById("latest-news");
+        const horizList = document.getElementById("horizontal-list");
 
         latestNews.addEventListener('click',redirect);
+        horizList.addEventListener('click',redirect2);
     </script>
 </body>
 </html>
